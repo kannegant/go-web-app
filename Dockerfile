@@ -4,6 +4,8 @@ WORKDIR /app
 
 copy go.mod .
 
+RUN go mod download
+
 Copy . .
 
 RUN  go build -o main .
